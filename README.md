@@ -3,13 +3,16 @@ A hello world demo program to show you how to write native cpp program, and run 
 ## Thanks
   From [here](http://stackoverflow.com/questions/9460251/how-do-i-build-a-native-command-line-executable-to-run-on-android) I find the solution, but it's c, not cpp.  
   In the cpp case, It's a lot of work, solving undefined references, find what lib must linked in, GOD, It's a nightmare. But it's done, you can pull and run.
-## how to build and run
+## How to build and run
   make clean; make; make install; make run
   
-## The origin author says:
-files location:   
-/home/dd/android/dev/native/test.c  
-/home/dd/android/dev/native/Makefile  
+## How to debug 
+
+files location:
+```
+/home/dd/android/dev/native/test.c
+/home/dd/android/dev/native/Makefile
+```
 The author then compiled and tested it with:
 ```bash
 dd@abil:~/android/dev/native$ make clean; make; make install; make run
@@ -22,11 +25,12 @@ dd@abil:~/android/dev/native$ make clean; make; make install; make run
 Hello, world (i=3)!
 ```
 SDK and NDK used were:
-
+```
 source code: /home/dd/android/dev/native
 android ndk: /home/dd/android/android-ndk-r5
 android sdk: /home/dd/android/android-sdk-linux_86
-However, the debug guide was the really good part ! Copy and pasted ...
+```
+**However, the debug guide was the really good part ! Copy and pasted ...**
 
 Set the compile for enable debugging:
 ```
