@@ -7,6 +7,7 @@ ANDROID_NDK_ROOT := $(NDK)
 ANDROID_NDK_HOST := darwin-x86_64
 #ANDROID_SDK_ROOT := $(ANDROID_SDK_ROOT)
 PREBUILD := $(ANDROID_NDK_ROOT)/toolchains/arm-linux-androideabi-4.9/prebuilt/$(ANDROID_NDK_HOST)
+PREBUILD2 := $(ANDROID_NDK_ROOT)/prebuilt/android-arm
 
 BIN := $(PREBUILD)/bin
 LIB := $(ANDROID_NDK_ROOT)/platforms/android-$(NDK_PLATFORM_VER)/arch-arm/usr/lib
@@ -43,7 +44,7 @@ run:
 	$(ANDROID_SDK_ROOT)/platform-tools/adb shell $(INSTALL_DIR)/$(APP)
 
 debug-install:
-	$(ANDROID_SDK_ROOT)/platform-tools/adb push $(PREBUILD)/../gdbserver $(INSTALL_DIR)/gdbserver
+	$(ANDROID_SDK_ROOT)/platform-tools/adb push $(PREBUILD2)/gdbserver/gdbserver $(INSTALL_DIR)/gdbserver
 	$(ANDROID_SDK_ROOT)/platform-tools/adb shell chmod 777 $(INSTALL_DIR)/gdbserver
 
 debug-go:
